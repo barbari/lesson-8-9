@@ -1,5 +1,9 @@
 
 @media ( min-width :300px) {
+.well{
+
+   border:1px solid #FA28FF;
+  }
 #clock{
 background-color: #BEF5FF;
 border: solid 1px #3A9FC3;
@@ -8,7 +12,7 @@ font-size:50px;
 color: #3A9FC3;
 
 }
-h3{ font-size: 15px}
+h3{ font-size: 12px}
 .col-md-12 p{
   color:#47FFDC;
 }
@@ -38,7 +42,10 @@ input[type=text], [type=password]
 
 
 @media ( min-width :1268px) {
+ .well{
 
+   border:1px solid #eee;
+  }
 #clock{
 background-color: #E2FFD8;
 border: solid 1px #5C8050;
