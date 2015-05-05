@@ -1,0 +1,148 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+    	<link rel="stylesheet" href="css/bootstrap.css">
+    	<link rel="stylesheet" href="css/style.css">
+       
+<style >
+
+
+</style>
+    </head>
+<body onload="startTime()">
+<header >
+            <section class="bg-white shadow">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-xs-4">
+                            <figure class="identity">
+                                <a href="index.html">
+                                    <span>Assignment 8-9 </span>
+                                </a>
+                            </figure>
+                        </div>
+                     
+                    </div> 
+
+                     <div class="row">
+                        <div class="col-sm-2 col-xs-4">
+                            
+                        </div> 
+                    </div>
+                </div> 
+            </section> 
+        </header> 
+		
+<section class="box wrapper">
+	<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+             </div>
+        </div>
+                                
+		 <div class="row well">
+			<div class="col-md-12">
+                 <h3 class="text-center">Make a digital clock</h3>
+					<div id="clock" class="text-center">
+                    </div>
+
+			</div>
+		</div>
+    
+        <div class="row well">
+            <div class="col-md-12">
+              <h3 class="text-center ">Make an animation sequence <br>that is triggered when the user submits a form</h3>
+              <p class="text-center">Username is  qq and password ww</p>
+              <hr>
+                <div class="col-md-6">
+                    <form >     
+                         <div class="form-group ">
+                            <label for="InputUsername">Username</label>
+                            <input type="text" class="form-control" id="User" placeholder="Enter username">
+                 
+                        </div>
+                        <div class="form-group">
+                             <label for="InputPassword">Password</label>
+                            <input type="password" class="form-control" id="Passw" placeholder="Password">
+                        </div>
+
+                        <input class="btn-block btn-success" type="button" value="Login" onClick="validate(this.form)">
+                        <input class="btn-block btn-success" type="button" value="modal box" onClick="imgshow()">
+                    </form >
+                </div>
+               
+
+            </div>
+        </div>
+ 
+        <div class="row well">
+            <div class="col-md-12">
+              <h3 class="text-center ">Make your own Light Box</h3>
+              <div id="lightbox" class="shadow">
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                      <a href="#" class="thumbnail flip" onClick="validate(this.form)">
+                        <img src="img/1.jpeg" class="img-rounded" >
+                      </a>
+                    </div>
+
+                      <div class="col-xs-6 col-md-3">
+                       <a href="#" class="thumbnail flip" onClick="validate(this.form)">
+                        <img src="img/1.jpeg" class="img-rounded">
+                      </a>
+                      </div>
+
+                      <div class="col-xs-6 col-md-3">
+                       <a href="#" class="thumbnail flip" onClick="validate(this.form)">
+                        <img src="img/1.jpeg" class="img-rounded">
+                      </a>
+                      </div>
+
+                      <div class="col-xs-6 col-md-3">
+                       <a href="#" class="thumbnail flip" onClick="validate(this.form)">
+                        <img src="img/1.jpeg" class="img-rounded">
+                      </a>
+                    </div>
+                   
+                  </div>
+
+                  <div class="modal">
+                    <div class="modal-header"> Modal Box 
+                     <button type="button" onClick="name(this.form)" class="close" id="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+                    <div class="modal-body">Content</div>
+                  </div>
+
+               </div>
+          </div>
+      </div>
+       <div class="row well">
+            <div class="col-md-12">
+              <h3 class="text-center ">Using User Data</h3>
+              <button class="btn-block btn-success" onclick="detectOs()">Detect the OS that the user is using?</button>
+              <div class="text-center " id="detectOsResult"> </div>
+               <button class="btn-block btn-success" onclick="detectBrowser()">Detect the Browser that the user is using</button>
+                <div class="text-center " id="detectBrowserResult"> </div>
+                <button  class="btn-block btn-success" onclick="detectWindowSize">Detect the size of the window</button>
+                 <div class="text-center " id="detectWindowSizeResult"> </div>
+                 <button class="btn-block btn-success" onclick="detectBrowserResize">Detect when the user is resizing their browser window</button>
+                  <div class="text-center " id="detectBrowserResizeResult"> </div>
+             
+             </div>
+        </div>
+	</div> 
+    <div class="push"></div>
+</section> 
+
+<footer  class="footer">
+         <p>Copyright &copy; 2014  All Rights Reserved.</p>
+       </footer>
+<script>
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <script>
+      $(document).ready(function() {
+        var os = navigator.platform;
+        var browser;
+
+        if (navigator.userAgent.indexOf("Chrome") !== -1) {
+          browser = "Chrome";
+        } else if (navigator.userAgent.indexOf("Firefox") !== -1) {
+          browser = "Firefox";
+        } else if (navigator.userAgent.indexOf("Safari") !== -1) {
+          browser = "Safari";
+        } else {
+          browser = "Something Else";
+        }
+
+        userInfo = "Using " + browser + " on " + os + ".";
+        windowInfo = "Window size is " + $(window).width() + "px by " + $(window).height() + "px.";
+
+        alert(userInfo);
+        alert(windowInfo);
+
+        var resize;
+
+        $(window).resize(function() {
+          clearTimeout(resize);
+          resize = setTimeout(function() {
+            windowInfo = "Resizing: window size is " + $(window).width() + "px by " + $(window).height() + "px.";
+            alert(windowInfo);
+          }, 500);
+        });
+      });
+    </script>
+  </body>
+</html>

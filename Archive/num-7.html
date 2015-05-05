@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <style>
+      .thumbnail {
+        display: block;
+        width: 250px;
+        height: 250px;
+        margin: 15px auto;
+        cursor: pointer;
+      }
+
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .lightbox img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -320px;
+        margin-left: -320px;
+      }
+
+      .lightbox a {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-family: Courier;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: orange;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img class="thumbnail" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-15/11142954_1562916630628986_425899221_n.jpg">
+    <img class="thumbnail" src="https://distilleryimage8-a.akamaihd.net/436ca40a56b711e2826f22000a9f13e9_7.jpg">
+    <img class="thumbnail" src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11055431_871360716253761_1131499802_n.jpg">
+    <img class="thumbnail" src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xfp1/t51.2885-15/1723300_478755662236578_478854463_n.jpg">
+
+    <div class="lightbox">
+      <a class="close">Close</a>
+      <img class="enlarged-image" src="">
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $("body").on("contextmenu", ".enlarged-image", function() {
+          return false;
+        });
+
+        $(".thumbnail").click(function() {
+          $("body").css("overflow", "hidden");
+          $(".lightbox .enlarged-image").attr("src", $(this).attr("src"));
+          $(".lightbox").show();
+        });
+
+        $(".close").click(function() {
+          $("body").css("overflow", "");
+          $(".lightbox .enlarged-image").attr("src", "");
+          $(".lightbox").hide();
+        });
+      });
+    </script>
+  </body>
+</html>
